@@ -1,0 +1,6 @@
+The plan is to use this repo to practice and develop video analysis knowledge. 
+To Do 
+    - Open VINO installation in WSL
+    - GStreamer practice
+    - Model Zoo
+    - HLS streamer practice
