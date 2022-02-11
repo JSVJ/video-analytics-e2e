@@ -32,11 +32,10 @@ def bus_call(bus, message, pipeline):
 if __name__ == "__main__":
 
     # connect RTSP camera or a file source location
-    VIDEO_FILE = 'video-analytics-e2e/BasicFaceDetection/Sample_Videos/face-demographics-walking.mp4'
-    OUTPUT_LOCATION = 'video-analytics-e2e/BasicFaceDetection/Sample_Videos/'
+    VIDEO_FILE = 'BasicFaceDetection/Sample_Videos/face-demographics-walking.mp4'
     # download the model from the open vino model zoo repository
-    DETECTION_MODEL = 'video-analytics-e2e/BasicFaceDetection/Models/intel/face-detection-adas-0001/FP32/face-detection-adas-0001.xml'
-
+    DETECTION_MODEL = 'BasicFaceDetection/Models/intel/face-detection-adas-0001/FP32/face-detection-adas-0001.xml'
+    SINK_LOCATION = 'BasicFaceDetection/output.mp4'
     # setting the GStreamer pipeline
     GST_PIPELINE = f'''
     filesrc location={VIDEO_FILE}
@@ -47,7 +46,7 @@ if __name__ == "__main__":
     ! queue
     ! gvawatermark
     ! x264enc
-    ! filesink location="video-analytics-e2e/BasicFaceDetection/output.mp4"
+    ! filesink location={SINK_LOCATION}
     '''
 
     Gst.init(None)
