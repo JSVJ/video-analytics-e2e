@@ -1,2 +1,2 @@
-[] Add a classification Model in face detection
-[] Try adding another proc in object detection model and see the pipeline. 
+1. Add a classification Model in face detection
+2. Try adding another proc in object detection model and see the pipeline. 
