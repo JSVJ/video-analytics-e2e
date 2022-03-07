@@ -50,7 +50,7 @@ if __name__ == '__main__':
     ! clockoverlay
     ! x264enc tune=zerolatency
     ! mpegtsmux
-    ! hlssink playlist-root=http://172.18.37.126:8080
+    ! hlssink playlist-root=http://172.30.98.103:8080
         location=/home/vishnu/practice_codes/video_analysis_practice/video-analytics-e2e/GStreamer-HLS-Pipeline/segment_%05d.ts
         target-duration=20 
         max-files=10
